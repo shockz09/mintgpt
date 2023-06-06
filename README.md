@@ -1,7 +1,6 @@
 ## A GPT-3 X SOLANA ( Underdog protocol project)
 
 # MintGPT
-![Project Screenshot]("https://imgur.com/QNmPp5n.png")
 
 ## Description
 
