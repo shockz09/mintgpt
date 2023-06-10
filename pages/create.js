@@ -66,17 +66,17 @@ export default function Create() {
 
   const createNFT = async () => {
     const toAddress = walletAddress ? walletAddress : publicKey.toString();
-    const res = await fetch('https://dev.underdogprotocol.com/v2/projects/t/1/nfts', {
+    const res = await fetch('https://api.underdogprotocol.com/v2/projects/c/9/nfts', {
       headers: {
-        'Authorization': 'Bearer 3bdaf86ed859fd.a9d1d48b34b44e759794a2dc34cef8a5 ', // Replace with your API key
+        'Authorization': `Bearer ${process.env.UP_API_KEY}`, // Replace with your API key
         'Content-Type': 'application/json',
       },
       method: 'POST',
       body: JSON.stringify({
-        'name': 'LeGoat',
+        'name': 'Underdog AI Art',
         'image': ImageURL,
         'attributes': {
-          'points': '38390',
+
         },
         'receiverAddress': toAddress
       }),
