@@ -66,7 +66,7 @@ export default function Create() {
 
   const createNFT = async () => {
     const toAddress = walletAddress ? walletAddress : publicKey.toString();
-    const res = await fetch('https://api.underdogprotocol.com/v2/projects/c/9/nfts', {
+    const res = await fetch('https://api.underdogprotocol.com/v2/projects/blah/9/nfts', {
       headers: {
         'Authorization': `Bearer ${process.env.UP_API_KEY}`, // Replace with your API key
         'Content-Type': 'application/json',
@@ -156,9 +156,7 @@ export default function Create() {
             />
           )}
         </div>
-        {nftTrue ? <div className="font-bold text-gray-200">Mint Address : {nftData.mintAddress} <br /> Transaction ID : {nftData.transactionId}</div> : null}
-
-
+        {nftTrue ? <div className="font-bold text-gray-700"> Transaction ID : {nftData.transactionId}</div> : null}
       </main>
     </div>
   );
